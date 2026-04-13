@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "decrypt-save": "node scripts/decrypt-save.mjs"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",
