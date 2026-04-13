@@ -1,0 +1,38 @@
+prefix_rule(
+    pattern = ["pnpm", "lint"],
+    decision = "allow",
+    justification = "Allow the repository lint command.",
+    match = [
+        "pnpm lint",
+    ],
+)
+
+prefix_rule(
+    pattern = ["pnpm", "prettier"],
+    decision = "allow",
+    justification = "Allow the repository prettier command.",
+    match = [
+        "pnpm prettier",
+        "pnpm prettier --write .",
+    ],
+)
+
+prefix_rule(
+    pattern = ["pnpm", "encrypt-save"],
+    decision = "allow",
+    justification = "Allow the repository save encryption helper.",
+    match = [
+        "pnpm encrypt-save refs/REPO_SAVE_unclear_items_one_player.json",
+        "pnpm encrypt-save refs/in.json refs/out.es3",
+    ],
+)
+
+prefix_rule(
+    pattern = ["pnpm", "decrypt-save"],
+    decision = "allow",
+    justification = "Allow the repository save decryption helper.",
+    match = [
+        "pnpm decrypt-save refs/REPO_SAVE_2026_04_04_13_32_33.es3",
+        "pnpm decrypt-save refs/in.es3 refs/out.json",
+    ],
+)
